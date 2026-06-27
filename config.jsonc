@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 1,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "padding-left": 0,
+  "padding-right": 0,
+
+  "modules-left": [ 
+  "ext/workspaces",
+  "custom/sep",
+  "cava",
+  "custom/sep"
+  ],
+  "modules-right": [
+    "wireplumber",
+    "custom/sep",
+    "mpris",
+    "custom/sep",
+    "temperature",
+    "custom/sep",
+    "temperature#gpu",
+    "custom/sep",
+    "clock"
+  ],
+  "ext/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+  "cava": {
+    "cava_config": "/home/allie/.config/cava/waybar_raw.conf",
+    "input_delay": 2,
+    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    "actions": {
+      "on-click-right": "mode"
+    }
+  },
+
+  "mpris": {
+    "format": "  {artist} - {title} ",
+    "format-paused": " 󰐊 {artist} - {title} ",
+    "max-length": 37,
+    "tooltip": true,
+    "player": "spotify"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6
+  },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 85,
+    "format": "CPU: {temperatureC}C"
+  },
+
+  "temperature#gpu": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "format": "GPU: {temperatureC}°C"
+  },
+
+  "wireplumber": {
+    "scroll-step": 5,
+    "format": " {icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+      "headphones": "󰋋",
+      "headset": "󰋎"
+    }
+  },
+  "custom/sep": {
+    "format": "|",
+    "interval": 0
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%m-%d-%y}",
+    "tooltip-format": "{:%A, %B %d, %Y}",
+    "on-click": "toggle"
+  }
+}
