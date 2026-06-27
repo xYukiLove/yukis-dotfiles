@@ -1,0 +1,153 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "builtin",
+    "source": "nixos"
+  },
+
+  "display": {
+    "separator": " : ",
+    "color": "white"
+  },
+
+  "modules": [
+    {
+      "type": "command",
+      "key": "  ",
+      "keyColor": "light_magenta",
+      "text": "splash=$(hyprctl splash);echo $splash"
+    },
+
+    "break",
+
+    {
+      "type": "title",
+      "key": "  ",
+      "format": "{6} {7} {8}",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "custom",
+      "format": "┌────────────────────────────────────────────────────────────┐",
+      "outputColor": "light_magenta"
+    },
+
+    {
+      "type": "chassis",
+      "key": "  󰇺 Chassis",
+      "format": "{1} {2} {3}",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "os",
+      "key": "   OS",
+      "format": "{pretty-name}",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "kernel",
+      "key": "   Kernel",
+      "format": "{2}",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "packages",
+      "key": "  󰏗 Packages",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "display",
+      "key": "  󰍹 Display",
+      "format": "{1}x{2} @ {3}Hz [{7}]",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "terminal",
+      "key": "   Terminal",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "WM",
+      "key": "  󱗃 WM",
+      "format": "{2}",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "cpu",
+      "format": "{1} @ {7}",
+      "key": "   CPU",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "gpu",
+      "format": "{1} {2}",
+      "key": "  󰊴 GPU",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "gpu",
+      "format": "{3}",
+      "key": "   GPU Driver",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "memory",
+      "key": "   Memory ",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "disk",
+      "key": "  󱦟 OS Age ",
+      "folders": "/",
+      "keyColor": "light_magenta",
+      "format": "{days} days",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "uptime",
+      "key": "  󱫐 Uptime ",
+      "keyColor": "light_magenta",
+      "outputColor": "white"
+    },
+
+    {
+      "type": "custom",
+      "format": "└────────────────────────────────────────────────────────────┘",
+      "outputColor": "light_magenta"
+    },
+
+    {
+      "type": "colors",
+      "paddingLeft": 2,
+      "symbol": "circle"
+    },
+
+    "break"
+  ]
+}
