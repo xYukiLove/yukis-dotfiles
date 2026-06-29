@@ -16,6 +16,7 @@
   "custom/sep"
   ],
   "modules-right": [
+    "custom/sep",
     "wireplumber",
     "custom/sep",
     "mpris",
@@ -29,7 +30,11 @@
   "ext/workspaces": {
     "format": "{name}",
     "on-click": "activate",
-    "sort-by-number": true
+    "sort-by-number": true,
+    "all-outputs": false,
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
   },
   "cava": {
     "cava_config": "/home/allie/.config/cava/waybar_raw.conf",
