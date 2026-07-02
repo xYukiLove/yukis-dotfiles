@@ -15,6 +15,8 @@
   "cava",
   "custom/sep"
   ],
+  "modules-center": [
+  ],
   "modules-right": [
     "custom/sep",
     "wireplumber",
@@ -25,7 +27,9 @@
     "custom/sep",
     "temperature#gpu",
     "custom/sep",
-    "clock"
+    "clock",
+    "custom/sep",
+    "tray"
   ],
   "ext/workspaces": {
     "format": "{name}",
@@ -33,12 +37,28 @@
     "sort-by-number": true,
     "all-outputs": false,
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5]
+      "*": 5 
+    }
+  },
+  "niri/workspaces": {
+    "format": "{name}",
+    "all-outputs": false,
+    "persistent-workspaces": {
+      "*": 5 
+    }
+  },
+  "dwl/window": {
+    "format": "{title}",
+    "max-length": 50,
+    "rewrite": {
+       "(.*) - Mozilla Firefox": "🌎 $1",
+       "(.*) - vim": " $1",
+       "(.*) - zsh": " [$1]"
     }
   },
   "cava": {
     "cava_config": "/home/allie/.config/cava/waybar_raw.conf",
-    "input_delay": 2,
+    "input_delay": 1.5,
     "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     "actions": {
       "on-click-right": "mode"
@@ -68,7 +88,6 @@
     "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
     "format": "GPU: {temperatureC}°C"
   },
-
   "wireplumber": {
     "scroll-step": 5,
     "format": " {icon} {volume}%",
