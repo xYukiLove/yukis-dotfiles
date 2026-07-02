@@ -1,14 +1,14 @@
-@define-color bg #282828;      /* deep soft black-purple */
-@define-color fg #ffd799;      /* warm pastel pink-white */
-@define-color blk #1d2021;     /* surface dark */
-@define-color red #ffb4ab;     /* pastel rose */
-@define-color grn #b8e3c6;     /* soft mint (kept desaturated for balance */
-@define-color ylw #e4bb79;     /* pastel peach-gold */
-@define-color blu #a9c7ff;     /* baby sky blue */
-@define-color mag #e2b6ff;     /* lavender pink */
-@define-color cyn #b6f0ea;     /* soft aqua */
-@define-color brblk #3c3836;   /* slightly lifted border */
-@define-color white #fff7fb;   /* warm white */
+@define-color bg #282828;
+@define-color fg #ffd799;
+@define-color blk #1d2021;
+@define-color red #ffb4ab;
+@define-color grn #b8e3c6;     
+@define-color ylw #e4bb79;     
+@define-color blu #a9c7ff;     
+@define-color mag #e2b6ff;     
+@define-color cyn #b6f0ea;     
+@define-color brblk #3c3836;   
+@define-color white #fff7fb;   
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
@@ -63,10 +63,13 @@ button:hover {
 #disk,
 #network,
 #tray {
-    padding: 0 8px;
-    color: @white;
+    color: @fg;
+    background-color: @bg;
 }
-
+#tray menu {
+  background: @bg;
+  color: @fg;
+}
 #cava {
     color: @fg;
 }
@@ -107,7 +110,3 @@ button:hover {
     background-color: @red;
 }
 
-/* Tray */
-#tray {
-    background-color: #2980b9;
-}
