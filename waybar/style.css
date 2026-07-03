@@ -101,9 +101,11 @@ button:hover {
 }
 
 /* Network */
+#bluetooth {
+    color: @fg;
+}
 #network {
-    color: @blu;
-    border-bottom: 4px solid @blu;
+    color: @fg;
 }
 
 #network.disconnected {
