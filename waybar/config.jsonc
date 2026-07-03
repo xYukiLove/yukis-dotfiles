@@ -10,10 +10,10 @@
   "padding-right": 0,
 
   "modules-left": [ 
-  "ext/workspaces",
-  "custom/sep",
-  "cava",
-  "custom/sep"
+    "ext/workspaces",
+    "custom/sep",
+    "cava",
+    "custom/sep"
   ],
   "modules-center": [
   ],
@@ -50,11 +50,6 @@
   "dwl/window": {
     "format": "{title}",
     "max-length": 50,
-    "rewrite": {
-       "(.*) - Mozilla Firefox": "🌎 $1",
-       "(.*) - vim": " $1",
-       "(.*) - zsh": " [$1]"
-    }
   },
   "cava": {
     "cava_config": "/home/allie/.config/cava/waybar_raw.conf",
