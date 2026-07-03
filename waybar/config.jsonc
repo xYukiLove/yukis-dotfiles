@@ -9,13 +9,14 @@
   "padding-left": 0,
   "padding-right": 0,
 
-  "modules-left": [ 
+  "modules-left": [
     "ext/workspaces",
     "custom/sep",
     "cava",
     "custom/sep"
   ],
   "modules-center": [
+    "dwl/window"
   ],
   "modules-right": [
     "custom/sep",
@@ -27,6 +28,10 @@
     "custom/sep",
     "temperature#gpu",
     "custom/sep",
+    "bluetooth",
+    "custom/sep",
+    "network",
+    "custom/sep",
     "clock",
     "custom/sep",
     "tray"
@@ -37,29 +42,28 @@
     "sort-by-number": true,
     "all-outputs": false,
     "persistent-workspaces": {
-      "*": 5 
+      "*": 5
     }
   },
   "niri/workspaces": {
     "format": "{name}",
     "all-outputs": false,
     "persistent-workspaces": {
-      "*": 5 
+      "*": 5
     }
   },
   "dwl/window": {
     "format": "{title}",
-    "max-length": 50,
+    "max-length": 50
   },
   "cava": {
-    "cava_config": "/home/allie/.config/cava/waybar_raw.conf",
+    "cava_config": "/home/yuki/.config/cava/waybar_raw.conf",
     "input_delay": 1.5,
     "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
     "actions": {
       "on-click-right": "mode"
     }
   },
-
   "mpris": {
     "format": "  {artist} - {title} ",
     "format-paused": " 󰐊 {artist} - {title} ",
@@ -67,18 +71,30 @@
     "tooltip": true,
     "player": "spotify"
   },
-
+  "network": {
+    "format-wifi": "WIFI",
+    "format-ethernet": "ETH",
+    "format-disconnected": "N/A",
+    "tooltip": true,
+    "on-click": "kitty -e nmtui"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "{controller_alias}",
+    "tooltip-format-connected": "{device_alias}",
+    "on-click": "blueman-manager"
+  },
   "tray": {
     "icon-size": 16,
     "spacing": 6
   },
-
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 85,
     "format": "CPU: {temperatureC}C"
   },
-
   "temperature#gpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
     "format": "GPU: {temperatureC}°C"
