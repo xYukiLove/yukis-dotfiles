@@ -9,7 +9,7 @@
   "padding-left": 0,
   "padding-right": 0,
 
-  "modules-left": [
+  "modules-left": [ 
     "ext/workspaces",
     "custom/sep",
     "cava",
@@ -42,19 +42,29 @@
     "sort-by-number": true,
     "all-outputs": false,
     "persistent-workspaces": {
-      "*": 5
+      "*": 5 
     }
   },
   "niri/workspaces": {
     "format": "{name}",
     "all-outputs": false,
     "persistent-workspaces": {
-      "*": 5
+      "*": 5 
     }
   },
   "dwl/window": {
     "format": "{title}",
     "max-length": 50
+  },
+  "dwl/tags": {
+    "num-tags": 9,
+    "tag-labels": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
   },
   "cava": {
     "cava_config": "/home/yuki/.config/cava/waybar_raw.conf",
@@ -72,16 +82,16 @@
     "player": "spotify"
   },
   "network": {
-    "format-wifi": "WIFI",
-    "format-ethernet": "ETH",
+    "format-wifi": "EVIL",
+    "format-ethernet": "ANGEL",
     "format-disconnected": "N/A",
     "tooltip": true,
     "on-click": "kitty -e nmtui"
   },
   "bluetooth": {
     "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": "",
+    "format-disabled": "NOBLOO",
+    "format-connected": "BLOO",
     "tooltip-format": "{controller_alias}",
     "tooltip-format-connected": "{device_alias}",
     "on-click": "blueman-manager"
