@@ -1,5 +1,5 @@
 @define-color bg #282828;
-@define-color fg #ffd799;
+@define-color fg #C4B28A;
 @define-color blk #1d2021;
 @define-color red #ffb4ab;
 @define-color grn #b8e3c6;     
@@ -7,7 +7,7 @@
 @define-color blu #a9c7ff;     
 @define-color mag #e2b6ff;     
 @define-color cyn #b6f0ea;     
-@define-color brblk #3c3836;   
+@define-color brblk #727169;   
 @define-color white #fff7fb;   
 
 * {
@@ -36,11 +36,11 @@ window#waybar {
 }
 
 #workspaces button.empty {
-    color: @white;
+    color: @fg;
 }
 
 #workspaces button.empty.active {
-    color: @cyn;
+    color: @fg;
     border-bottom: 3px solid @fg;
 }
 
@@ -101,10 +101,10 @@ button:hover {
 }
 
 /* Network */
-#bluetooth {
+#network {
     color: @fg;
 }
-#network {
+#bluetooth {
     color: @fg;
 }
 
