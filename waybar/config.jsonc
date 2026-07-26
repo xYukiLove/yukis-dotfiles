@@ -9,50 +9,52 @@
   "padding-left": 0,
   "padding-right": 0,
 
-  "modules-left": [ 
+  "modules-left": [
+    //"custom/sep",
     "ext/workspaces",
     "custom/sep",
     "cava",
     "custom/sep"
   ],
   "modules-center": [
-    "dwl/window"
   ],
   "modules-right": [
     "custom/sep",
-    "wireplumber",
-    "custom/sep",
     "mpris",
     "custom/sep",
+    //"tray",
+    //"custom/sep",
     "temperature",
     "custom/sep",
     "temperature#gpu",
     "custom/sep",
-    "bluetooth",
-    "custom/sep",
-    "network",
+    "wireplumber",
     "custom/sep",
     "clock",
-    "custom/sep",
-    "tray"
+    "custom/sep"
   ],
   "ext/workspaces": {
     "format": "{name}",
     "on-click": "activate",
-    "sort-by-number": true,
+    "sort-by-id": true,
     "all-outputs": false,
     "persistent-workspaces": {
       "*": 5 
     }
   },
-  "niri/workspaces": {
-    "format": "{name}",
-    "all-outputs": false,
-    "persistent-workspaces": {
-      "*": 5 
-    }
+  "mango/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "Ⅰ",
+      "2": "Ⅱ",
+      "3": "Ⅲ",
+      "4": "Ⅳ",
+      "5": "Ⅴ"
+    },
+    "on-click": "activate",
+    "hide-empty": "false"
   },
-  "dwl/window": {
+  "mango/window": {
     "format": "{title}",
     "max-length": 50
   },
@@ -98,20 +100,20 @@
   },
   "tray": {
     "icon-size": 16,
-    "spacing": 6
+    "spacing": 10 //6
   },
   "temperature": {
     "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 85,
-    "format": "CPU: {temperatureC}C"
+    "format": " CPU:{temperatureC}C "
   },
   "temperature#gpu": {
     "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
-    "format": "GPU: {temperatureC}°C"
+    "format": " GPU:{temperatureC}C "
   },
   "wireplumber": {
     "scroll-step": 5,
-    "format": " {icon} {volume}%",
+    "format": " {icon} {volume}% ",
     "format-muted": "󰝟 muted",
     "on-click": "pavucontrol",
     "format-icons": {
