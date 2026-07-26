@@ -1,17 +1,28 @@
-@define-color bg #282828;
+/*
+@define-color bg #141315;
+@define-color fg #ccc1e7;
+*/
+
+@define-color bg #151313;
+@define-color fg #e8e1e0;
+
+/*
+@define-color bg #1F1F28;
 @define-color fg #C4B28A;
-@define-color blk #1d2021;
-@define-color red #ffb4ab;
-@define-color grn #b8e3c6;     
-@define-color ylw #e4bb79;     
+*/
+@define-color blk #393836;
+@define-color red #c4746e;
+@define-color grn #699469;     
+@define-color ylw #C8C093;     
 @define-color blu #a9c7ff;     
-@define-color mag #e2b6ff;     
-@define-color cyn #b6f0ea;     
-@define-color brblk #727169;   
-@define-color white #fff7fb;   
+@define-color mag #938AA9;     
+@define-color cyn #8ea49e;     
+@define-color brblk #4f4445;   
+@define-color white #fffbff;
+
 
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-family: "Maple Mono NF", monospace;
     font-size: 16px;
     font-weight: bold;
 }
@@ -31,16 +42,16 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @fg;
+    color: @white;
     border-bottom: 3px solid @fg;
 }
 
 #workspaces button.empty {
-    color: @fg;
+    color: @brblk;
 }
 
 #workspaces button.empty.active {
-    color: @fg;
+    color: @brblk;
     border-bottom: 3px solid @fg;
 }
 
@@ -48,12 +59,12 @@ window#waybar {
     background-color: @red;
 }
 
-/* Hover effect */
+/* Hover effect
 button:hover {
     background: inherit;
     box-shadow: inset 0 -3px @white;
 }
-
+*/
 /* Modules */
 #clock,
 #custom-sep,
