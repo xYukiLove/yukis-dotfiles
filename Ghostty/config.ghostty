@@ -1,0 +1,4 @@
+theme = white
+font-family = "Maple Mono NF"
+window-decoration = none
+confirm-close-surface = false
