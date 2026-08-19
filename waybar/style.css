@@ -56,7 +56,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-    background-color: @red;
+    background-color: @white;
 }
 
 /* Hover effect
