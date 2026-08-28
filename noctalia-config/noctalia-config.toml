@@ -106,7 +106,7 @@ widget_order = [ "lockscreen-login-box@DP-1" ]
 enabled = true
 
 [plugin_settings."noctalia/wallhaven"]
-api_key = "q4b2z5EY58iPcTd30qm9BiiQcHqmyvp1"
+api_key = ""
 
 [plugins]
 enabled = [ "noctalia/wallhaven" ]
