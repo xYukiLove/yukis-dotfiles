@@ -20,7 +20,7 @@
   "modules": [
     {
       "type": "custom",
-      "format": "┌────────────────────────────────────────────────────────────┐",
+      "format": "┌                                                            ┐",
       "outputColor": "light_magenta"
     },
     {
@@ -60,12 +60,12 @@
     },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────────────┘",
+      "format": "└                                                            ┘",
       "outputColor": "light_magenta"
     },
     {
       "type": "custom",
-      "format": "┌────────────────────────────────────────────────────────────┐",
+      "format": "┌                                                            ┐",
       "outputColor": "light_magenta"
     },
     {
@@ -102,12 +102,12 @@
     },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────────────┘",
+      "format": "└                                                            ┘",
       "outputColor": "light_magenta"
     },
     {
       "type": "custom",
-      "format": "┌────────────────────────────────────────────────────────────┐",
+      "format": "┌                                                            ┐",
       "outputColor": "light_magenta"
     },
     {
@@ -151,7 +151,7 @@
     },
     {
       "type": "custom",
-      "format": "└────────────────────────────────────────────────────────────┘",
+      "format": "└                                                            ┘",
       "outputColor": "light_magenta"
     },
     {
