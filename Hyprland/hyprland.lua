@@ -8,13 +8,13 @@ local terminal    = "kitty"
 local fileManager = "thunar"
 local menu = "fuzzel"
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("noctalia & firefox & spotify & vesktop")
+  hl.exec_cmd("noctalia & firefox & spotify & vesktop & /usr/bin/lxpolkit")
 end)
 os.execute('export XDG_DATA_DIRS="/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}"')
-hl.env("XCURSOR_SIZE", "24")
-hl.env("XCURSOR_SIZE", "Shinobu-Oshino")
+hl.env("XCURSOR_SIZE", "32")
+hl.env("XCURSOR_THEME", "Shinobu-Oshino")
 hl.env("XDG_DATA_DIRS", "/var/lib/flatpak/exports/share:/home/luna/.local/share/flatpak/exports/share:/usr/local/share:/usr/share")
-hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_SIZE", "32")
 -- hl.config({
 --   ecosystem = {
 --     enforce_permissions = true,
@@ -170,8 +170,9 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. "panel-toggle control-center"))
 hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. "settings-toggle"))
+hl.bind(mainMod .. " + Period", hl.dsp.exec_cmd("noctalia msg panel-toggle liamwh/emoji-picker:desktop"), { description = "Emoji picker" })
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(ipc .. "window-switcher"))
-hl.bind("PRINT", hl.dsp.exec_cmd("flameshot gui"))
+hl.bind("PRINT", hl.dsp.exec_cmd("sh -c 'grim -g \"$(slurp)\" - | wl-copy'"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 local suppressMaximizeRule = hl.window_rule({
@@ -213,6 +214,16 @@ hl.window_rule({
 hl.window_rule({
     match = { class = "Spotify" },
     workspace = 3,
+})
+hl.window_rule({
+  name = "sober-no-opacity",
+  match = { class = "org.vinegarhq.Sober" },
+  opacity = "1.0 override 1.0 override 1.0 override",
+})
+hl.window_rule({
+  name = "steam-games-no-opacity",
+  match = { class = "steam_app_.*" },
+  opacity = "1.0 override 1.0 override 1.0 override",
 })
 hl.workspace_rule({ workspace = "1", monitor = "DP-1", persistent = true })
 hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = true })
