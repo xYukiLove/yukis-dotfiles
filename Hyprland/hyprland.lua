@@ -7,6 +7,7 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "thunar"
 local menu = "fuzzel"
+local browser = "firefox"
 hl.on("hyprland.start", function () 
   hl.exec_cmd("noctalia & firefox & spotify & vesktop & /usr/bin/lxpolkit")
 end)
@@ -39,8 +40,8 @@ hl.config({
         layout = "master",
     },
     decoration = {
-        rounding       = 2,
-        rounding_power = 2,
+        rounding       = 0,
+        rounding_power = 0,
         active_opacity   = 0.9,
         inactive_opacity = 0.8,
         shadow = {
@@ -130,8 +131,9 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + P", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(ipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
@@ -230,4 +232,6 @@ hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = true })
 hl.workspace_rule({ workspace = "3", monitor = "DP-1", persistent = true })
 hl.workspace_rule({ workspace = "4", layout = "scrolling", monitor = "DP-1", persistent = true })
 hl.workspace_rule({ workspace = "5", layout = "scrolling", monitor = "DP-1", persistent = true })
+
+-- For Noctalia Color templates
 require("noctalia").apply_theme()
