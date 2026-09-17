@@ -3,7 +3,7 @@
 
   "logo": {
     "type": "kitty-direct",
-    "source": "~/.config/fastfetch/images/scribbledvohl.png",
+    "source": "~/.config/fastfetch/images/yukilove2.png",
     "height": 25,
     "width": 45,
     "padding": {
@@ -25,7 +25,7 @@
     },
     {
       "type": "os",
-      "key": "   OS",
+      "key": "   OS",
       "format": "{pretty-name}",
       "keyColor": "light_magenta",
       "outputColor": "white"
@@ -71,7 +71,7 @@
     {
       "type": "wm",
       "key": "   WM",
-      "format": "{2} {3}",
+      "format": "{2}",
       "keyColor": "light_magenta",
       "outputColor": "white"
     },
