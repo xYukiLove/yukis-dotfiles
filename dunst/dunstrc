@@ -1,0 +1,75 @@
+
+[global]
+    monitor = 0
+    follow = mouse
+
+    width = 340
+    height = 300
+    origin = top-right
+    offset = 12x12
+    notification_limit = 10
+
+    # Appearance
+    font = Maple Mono 10
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    ellipsize = middle
+    ignore_newline = no
+
+    # Spacing
+    padding = 12
+    horizontal_padding = 12
+    text_icon_padding = 8
+    separator_height = 1
+    separator_color = "#54546D"
+
+    # Borders and corners
+    frame_width = 1
+    frame_color = "#727169"
+    corner_radius = 0
+
+    # Behavior
+    sort = yes
+    indicate_hidden = yes
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    sticky_history = yes
+    history_length = 20
+    idle_threshold = 120
+
+    # Icons
+    icon_position = left
+    min_icon_size = 24
+    max_icon_size = 32
+
+    # Miscellaneous
+    transparency = 0
+    show_age_threshold = 60
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
+
+[urgency_low]
+    background = "#1F1F28"
+    foreground = "#C4B28A"
+    frame_color = "#727169"
+    highlight = "#957FB8"
+    timeout = 5
+
+[urgency_normal]
+    background = "#1F1F28"
+    foreground = "#C4B28A"
+    frame_color = "#727169"
+    highlight = "#597B75"
+    timeout = 5
+
+[urgency_critical]
+    background = "#1F1F28"
+    foreground = "#C4B28A"
+    frame_color = "#C34043"
+    highlight = "#C34043"
+    timeout = 0
+
